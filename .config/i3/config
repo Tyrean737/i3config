@@ -19,9 +19,6 @@ set $reboot sudo -A reboot
 set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
 set $hibernate sudo -A systemctl suspend
 
-# Setting keymap to German
-exec_always setxkbmap de
-
 # #---Starting External Scripts---# #
 # Setting the background and colorscheme:
 exec_always --no-startup-id wal -i ~/.config/wall.png
