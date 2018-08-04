@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mpv $(grep -P "^$(grep https: ~/.larbs/tutorialvids | sed 's/\t.*//g' | dmenu -i -p "Learn about what? (ESC to cancel)" -l 5)\t" ~/.larbs/tutorialvids | sed 's/.*\t//')
