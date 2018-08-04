@@ -119,8 +119,8 @@ bindsym $mod+Shift+r		exec $term -e sudo ranger /
 bindsym $mod+t			split toggle
 bindsym $mod+Shift+t		gaps inner current set 15; gaps outer current set 15
 
-bindsym $mod+y			exec $term -e calcurse
-bindsym $mod+Shift+y		exec --no-startup-id "bash ~/.scripts/i3resize left"
+bindsym $mod+z			exec $term -e calcurse
+bindsym $mod+Shift+z		exec --no-startup-id "bash ~/.scripts/i3resize left"
 
 bindsym $mod+u			[instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 bindsym $mod+Shift+u		exec --no-startup-id "bash ~/.scripts/i3resize down"
@@ -165,8 +165,8 @@ bindsym $mod+Shift+k		move up 30
 bindsym $mod+l			focus right
 bindsym $mod+Shift+l		move right 30
 
-bindsym $mod+z			gaps outer current plus 5
-bindsym $mod+Shift+z		gaps outer current minus 5
+bindsym $mod+y			gaps outer current plus 5
+bindsym $mod+Shift+y		gaps outer current minus 5
 
 bindsym $mod+x			exec --no-startup-id lockscreen
 bindsym $mod+Shift+x		exec --no-startup-id prompt "Are you sure you want to shutdown?" "$shutdown"
@@ -402,3 +402,4 @@ bindsym XF86Documents		exec $term -e ranger ~/Documents
 ##bindsym XF86Battery		exec
 ##bindsym XF86Bluetooth		exec
 bindsym XF86WLAN		exec $netrefresh
+exec_always --no-startup-id notify-send -i ~/.scripts/larbs.png '<b>Welcome:</b> Press Super+F1 for the manual.' -t 10000
