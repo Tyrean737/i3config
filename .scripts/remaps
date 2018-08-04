@@ -6,3 +6,5 @@
 xset r rate 300 50
 # Setting German keymap
 setxkbmap de
+# Enalbe Numlock
+numlockx on
