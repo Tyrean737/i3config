@@ -19,14 +19,14 @@ command=i3pacman
 interval=once
 signal=8
 
-[torrents]
-command=i3torrent
-interval=20
-signal=7
+#[torrents]
+#command=i3torrent
+#interval=20
+#signal=7
 
-[weather]
-command=i3weather
-interval=3600
+#[weather]
+#command=i3weather
+#interval=3600
 
 [mail]
 label=📬
@@ -39,21 +39,21 @@ interval=once
 command=i3volume
 signal=10
 
-[iface]
-label=🌐
+#[iface]
+#label=🌐
 #instance=wlan0
-interval=10
+#interval=10
 
-[battery]
-command=i3battery
-interval=5
+#[battery]
+#command=i3battery
+#interval=5
 
 [time]
 label=📅
-command=echo $(date '+%Y %b %d (%a)  %I:%M%p') 🕓
+command=date '+%d %m %Y %H:%M'
 interval=30
 
-[wifi]
-command=i3wifi
-instance=wlp2s0
-interval=10
+#[wifi]
+#command=i3wifi
+#instance=wlp2s0
+#interval=10
