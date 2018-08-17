@@ -13,8 +13,8 @@ qute_shortcuts="$HOME/.config/qutebrowser/shortcuts.py"
 shellrc="$HOME/.bashrc"
 
 # Download the shorcut files if not present.
-[[ ! -f $folders ]] && curl https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.scripts/folders > "$folders"
-[[ ! -f $configs ]] && curl https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.scripts/configs > "$configs"
+[[ ! -f $folders ]] && curl https://raw.githubusercontent.com/Tyrean737/i3config/master/.scripts/folders > "$folders"
+[[ ! -f $configs ]] && curl https://raw.githubusercontent.com/Tyrean737/i3config/master/.scripts/configs > "$configs"
 
 # Remove
 rm -f $shell_shortcuts $ranger_shortcuts $qute_shortcuts
