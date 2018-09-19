@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# This script syncs the music folder from extern HDD to intern HDD.
+
+rsync -rtuv --progress /mnt/veracrypt1/Serien/ /hdd/Serien/

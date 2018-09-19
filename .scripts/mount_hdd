@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# This Script opens the encrypted internal HDD and mounts it in /hdd.
+
+cryptsetup luksOpen /dev/sdb hdd
+mount /dev/mapper/hdd /hdd

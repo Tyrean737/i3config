@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# This script syncs the music folder from extern HDD to intern HDD.
+
+rsync -rtuv --progress --exclude=MP3 --exclude=MusicBee /mnt/veracrypt1/Music/ /hdd/Music/
