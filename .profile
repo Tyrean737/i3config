@@ -8,6 +8,7 @@ export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
 export BIB="$HOME/Documents/LaTeX/uni.bib"
+export EMAIL="thunderbird"
 
 [[ ! -f ~/.shortcuts ]] && ~/.scripts/shortcuts.sh 2>/dev/null
 

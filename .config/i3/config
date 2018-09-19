@@ -110,7 +110,7 @@ bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!math|dropdown).*$"] ki
 bindsym $mod+w			exec --no-startup-id $BROWSER
 bindsym $mod+Shift+w		exec --no-startup-id $BROWSER
 
-bindsym $mod+e			exec $term -e neomutt
+bindsym $mod+e			exec --no-startup-id $EMAIL
 #bindsym $mod+Shift+e
 
 bindsym $mod+r 			exec $term -e ranger
