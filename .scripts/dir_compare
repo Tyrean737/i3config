@@ -1,0 +1,53 @@
+#!/bin/bash
+# This script is comparing files in two folders and printing out which are different.
+# It is possible to exclude subdirectories.
+# Do NOT put a / at the end of the directories!
+
+# Exclude subdirectories?
+
+read -p "Do you want to exclude subdirectories? y/N: " com
+
+if [ "$com" == "y" ]
+		then
+			sub=1
+	elif [ "$com" == "Y" ]
+		then
+			sub=1
+	else
+		sub=0
+	fi
+
+# Enter folders
+pwd=$(pwd)
+read -p "Enter first folder: " folder1
+read -p "Enter second folder: " folder2
+
+# Enter folders to be excluded
+if [ "$sub" == "1" ]
+	then
+		read -p "Enter which subfolder you want to be exluded: " exclude
+		ex="./$exclude/*"
+fi
+
+# Create and compare md5 of files
+if [ "$sub" == "1" ]
+	then
+		cd $folder1
+		find . -type f -not -path "$ex" | xargs md5sum > "$pwd/fol1"
+   		cd $pwd
+   		cd $folder2
+   		find . -type f -not -path "$ex" | xargs md5sum > "$pwd/fol2"
+   		cd $pwd
+   		diff fol1 fol2
+	else
+		cd $folder1
+		find . -type f | xargs md5sum > "$pwd/fol1"
+		cd $pwd
+		cd $folder2
+		find . -type f | xargs md5sum > "$pwd/fol2"
+		cd $pwd
+		diff fol1 fol2
+fi
+
+# Cleaning up
+rm fol1 fol2
