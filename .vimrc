@@ -4,7 +4,7 @@
 "  \ V /| | | | | | | | | (__
 "   \_/ |_|_| |_| |_|_|  \___|
 
-let mapleader =" "
+let mapleader ="#"
 " Load Pathogen for plugins:
 	execute pathogen#infect()
 	execute pathogen#helptags()
@@ -122,9 +122,9 @@ let mapleader =" "
 	nnoremap <C-t> :tabnew<cr>
 
 " Navigating with guides
-	inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
-	vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
-	map <Space><Tab> <Esc>/<++><Enter>"_c4l
+	inoremap <Tab><Space> <Esc>/<++><Enter>"_c4l
+	vnoremap <Tab><Space> <Esc>/<++><Enter>"_c4l
+	map <Tab><Space> <Esc>/<++><Enter>"_c4l
 
 " For normal mode when in terminals (in X I have caps mapped to esc, this replaces it when I don't have X)
 	inoremap jw <Esc>
@@ -180,6 +180,12 @@ let mapleader =" "
 	autocmd FileType tex inoremap ,nu $\varnothing$
 	autocmd FileType tex inoremap ,col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
 	autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
+
+	autocmd FileType tex inoremap ,en \begin{equation}<Enter><++><Enter>\end{equation}<Enter><Enter><++><ESC>/<++><Enter>NNc4l
+	autocmd FileType tex inoremap ,eq \begin{equation*}<Enter><++><Enter>\end{equation*}<Enter><Enter><++><ESC>/<++><Enter>NNc4l
+	autocmd FileType tex inoremap ,label \label{<++>}<Enter><++><ESC>/<++><Enter>NNc4l
+	autocmd FileType tex inoremap ,cite \cite{}<Space><++><Esc>5hi
+	autocmd FileType tex inoremap ,fig \begin{figure}[h]<Enter>\centering<Enter>\includegraphics[width=0.6\linewidth]{Bilder/<++>}<Enter>\caption{<++>}<Enter>\label{<++>}<Enter>\end{figure}<Enter><Enter><++><Esc>/<++><Enter>NNNNc4l
 
 """PHP/HTML
 	autocmd FileType php,html inoremap ,b <b></b><Space><++><Esc>FbT>i
@@ -241,3 +247,4 @@ vnoremap L >gv
 vnoremap H <gv
 
 map <enter><enter> yi[:e <c-r>"<cr>
+
