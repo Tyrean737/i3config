@@ -49,7 +49,7 @@ let mapleader ="#"
 	map <leader>p :!opout <c-r>%<CR><CR>
 
 " Compile document
-	map <leader>c :!compiler <c-r>%<CR>
+	map <leader>c :w<Enter>:!compiler <c-r>%<CR><Enter>
 
 "For saving view folds:
 	"au BufWinLeave * mkview
