@@ -34,8 +34,7 @@ let mapleader ="#"
 	map <leader>v $F@ly$:!feh --scale-down --auto-zoom --image-bg black <c-r>" &<CR><CR>
 
 " Open my bibliography file in split
-	map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
-	map <leader>b :vsp<space>~/Documents/LaTeX/uni.bib<CR>
+map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 
 " Open the selected text in a split (i.e. should be a file).
 	map <leader>o "oyaW:sp <C-R>o<CR>
@@ -50,6 +49,7 @@ let mapleader ="#"
 
 " Compile document
 	map <leader>c :w<Enter>:!compiler <c-r>%<CR><Enter>
+	map <leader>b :!bibtex <c-r>%<Backspace><Backspace><Backspace><Backspace><CR>
 
 "For saving view folds:
 	"au BufWinLeave * mkview
@@ -62,7 +62,7 @@ let mapleader ="#"
 	autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
 
 " Readmes autowrap text:
-	autocmd BufRead,BufNewFile *.md,*.tex set tw=79
+	autocmd BufRead,BufNewFile *.md,*.tex set tw=180
 
 " Get line, word and character counts with F3:
 	map <F3> :!wc <C-R>%<CR>
