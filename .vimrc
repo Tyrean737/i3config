@@ -5,9 +5,6 @@
 "   \_/ |_|_| |_| |_|_|  \___|
 
 let mapleader ="#"
-" Load Pathogen for plugins:
-	execute pathogen#infect()
-	execute pathogen#helptags()
 
 " Some basics:
 	set nocompatible
@@ -45,11 +42,20 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 	nnoremap S :%s//g<Left><Left>
 
 " Open corresponding.pdf
-	map <leader>p :!opout <c-r>%<CR><CR>
+	map <leader>p :!zathura <c-r>%<Backspace><Backspace><Backspace>pdf<CR>
 
 " Compile document
-	map <leader>c :w<Enter>:!compiler <c-r>%<CR><Enter>
-	map <leader>b :!bibtex <c-r>%<Backspace><Backspace><Backspace><Backspace><CR>
+	autocmd FileType tex map <leader>c :w<Enter>:!pdflatex <c-r>%<CR><Enter>
+	autocmd FileType tex map <leader>b :!bibtex <c-r>%<Backspace><Backspace><Backspace><Backspace><CR>
+
+" Compile C++ Program
+	autocmd FileType cpp map <leader>c :w<Enter>:!g++ <c-r>% -o <c-r>%<Backspace><Backspace><Backspace><Backspace><Enter>
+
+" Run C++ Program
+	autocmd FileType cpp map <leader>r :!./<c-r>%<Backspace><Backspace><Backspace><Backspace><Enter>
+
+
+
 
 "For saving view folds:
 	"au BufWinLeave * mkview
@@ -70,16 +76,6 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 " Spell-check set to F6:
 	map <F6> :setlocal spell! spelllang=en_us<CR>
 
-" Toggle DeadKeys set (for accent marks):
-	so ~/.vim/luke/deadkeys.vim
-	nm <leader><leader>d :call ToggleDeadKeys()<CR>
-	imap <leader><leader>d <esc>:call ToggleDeadKeys()<CR>a
-
-" Source my IPA shorcuts:
-	so ~/.vim/luke/ipa.vim
-	nm <leader><leader>i :call ToggleIPA()<CR>
-	imap <leader><leader>i <esc>:call ToggleIPA()<CR>a
-
 " Use urlview to choose and open a url:
 	:noremap <leader>u :w<Home>silent <End> !urlview<CR>
 	:noremap ,, :w<Home>silent <End> !urlview<CR>
@@ -92,10 +88,6 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 	map <F10> :Goyo<CR>
 	map <leader>f :Goyo \| set linebreak<CR>
 	inoremap <F10> <esc>:Goyo<CR>a
-
-" Toggle Prose Mode with F8:
-    so ~/.vim/luke/prose.vim
-    nm <F8> :call ToggleProse()<CR>
 
 " Enable Goyo by default for mutt writting
 	" Goyo's width will be the line limit in mutt.
@@ -216,6 +208,9 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 	autocmd FileType bib inoremap ,a @article{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>journal<Space>=<Space>"<++>",<Enter><tab>volume<Space>=<Space>"<++>",<Enter><tab>pages<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>8kA,<Esc>i
 	autocmd FileType bib inoremap ,b @book{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>publisher<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>6kA,<Esc>i
 	autocmd FileType bib inoremap ,c @incollection{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>booktitle<Space>=<Space>"<++>",<Enter><tab>editor<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>publisher<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>8kA,<Esc>i
+
+"C++
+	autocmd FileType cpp inoremap ,s #include <iostream><Enter>using namespace std;<Enter><Enter>
 
 "MARKDOWN
 	autocmd Filetype markdown,rmd map <leader>w yiWi[<esc>Ea](<esc>pa)
