@@ -174,7 +174,7 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 	autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
 
 	autocmd FileType tex inoremap ,frac \frac{}{<++>}<++><Esc>10hi
-	autocmd FileType tex inoremap ,mrm \mathrm{}<++><Esc>4hi
+	autocmd FileType tex inoremap ,rm \mathrm{}<++><Esc>4hi
 	autocmd FileType tex inoremap ,en \begin{equation}<Enter><++><Enter>\end{equation}<Enter><Enter><++><ESC>/<++><Enter>NNc4l
 	autocmd FileType tex inoremap ,eq \begin{equation*}<Enter><++><Enter>\end{equation*}<Enter><Enter><++><ESC>/<++><Enter>NNc4l
 	autocmd FileType tex inoremap ,label \label{<++>}<Enter><++><ESC>/<++><Enter>NNc4l
