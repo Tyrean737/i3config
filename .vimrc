@@ -179,7 +179,7 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 	autocmd FileType tex inoremap ,eq \begin{equation*}<Enter><++><Enter>\end{equation*}<Enter><Enter><++><ESC>/<++><Enter>NNc4l
 	autocmd FileType tex inoremap ,label \label{<++>}<Enter><++><ESC>/<++><Enter>NNc4l
 	autocmd FileType tex inoremap ,cite \cite{}<Space><++><Esc>5hi
-	autocmd FileType tex inoremap ,fig \begin{figure}[h]<Enter>\centering<Enter>\includegraphics[width=0.6\linewidth]{Bilder/<++>}<Enter>\captionsetup{format=hang}<Enter>\caption{<++>}<Enter>\label{<++>}<Enter>\end{figure}<Enter><Enter><++><Esc>/<++><Enter>NNNNc4l
+	autocmd FileType tex inoremap ,fig \begin{figure}[H]<Enter>\centering<Enter>\includegraphics[width=0.6\linewidth]{Bilder/<++>}<Enter>\captionsetup{format=hang}<Enter>\caption{<++>}<Enter>\label{<++>}<Enter>\end{figure}<Enter><Enter><++><Esc>/<++><Enter>NNNNc4l
 
 """PHP/HTML
 	autocmd FileType php,html inoremap ,b <b></b><Space><++><Esc>FbT>i
