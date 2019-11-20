@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# This script syncs the music and mp3 folders to extern HDD.
+
+rsync -rtuv --progress ~/Music/ /mnt/veracrypt2/Music/
+rsync -rtuv --progress ~/mp3/ /mnt/veracrypt2/mp3/

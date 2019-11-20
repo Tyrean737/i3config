@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# This script syncs the video folder to extern HDD.
+
+rsync -rtuv --progress ~/Videos/ /mnt/veracrypt2/Videos/
