@@ -2,4 +2,4 @@
 
 # This script syncs the music mp3 folder to a mounted android phone
 
-rsync -rtuv --progress --omit-dir-times --no-perms --exclude '~/mp3/Epic\ Sax\ Guy.mp3' --exclude '~/mp3/Half-Life\ Scream.mp3' --exclude '~/mp3/Jürgen\ Kumlehn\ -\ Play\ Blues\ Guitar' ~/mp3/* /run/user/1000/gvfs/mtp:host=OnePlus_OnePlus_241d1582/Interner\ gemeinsamer\ Speicher/Music
+rsync -rtuv --progress --omit-dir-times --no-perms ~/mp3/* /run/user/1000/gvfs/mtp:host=OnePlus_OnePlus_241d1582/Interner\ gemeinsamer\ Speicher/Music
