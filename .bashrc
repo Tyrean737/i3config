@@ -17,6 +17,7 @@ alias sdn="sudo shutdown now"
 alias psref="gpg-connect-agent RELOADAGENT /bye" # Refresh gpg
 
 # Some aliases
+alias rcp="rsync --progress"
 alias p="sudo pacman"
 alias SS="sudo systemctl"
 alias v="vim"
