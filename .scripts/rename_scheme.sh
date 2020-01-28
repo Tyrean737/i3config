@@ -15,24 +15,52 @@ else
 fi
 
 # Get seperator and new naming scheme
-read -p "Enter Seperator (e.g. -,.,SPACE): " sep
+read -p "Enter Seperator (e.g. -,.,SPACE) [Default: SPACE]: " sep
 read -p 'Enter new naming scheme as regular expression for awk (e.g. $1" - "$3): ' scheme
 
-# Print renaming of files
-for file in *.$ext; do
-	new_name=$(awk -F $sep '{print '"$scheme"'}' <<<"$file")
-	echo "$file ---> $new_name"
-done
+# Detect if $sep is empty (SPACE entered) and set $sep to SPACE
+if [ -z $sep ]; then
 
-# Rename files if ok
-read -p "Want to rename files as listed above? [y/N]: " run
+	# If Seperator is SPACE
+	# Print renaming of files
+	for file in *.$ext; do
+		new_name=$(awk '{print '"$scheme"'}' <<<"$file")
+		echo "$file ---> $new_name"
+	done
 
-if [ "$run" == "y" ]; then
+	# Rename files if ok
+	read -p "Want to rename files as listed above? [y/N]: " run
+
+	if [ "$run" == "y" ]; then
+		for file in *.$ext; do
+			new_name=$(awk '{print '"$scheme"'}' <<<"$file")
+			mv "$file" "$new_name"
+		done
+		echo "Done."
+	else
+		echo "Aborted."
+	fi
+
+else
+
+	# If Seperator is not SPACE
+	# Print renaming of files
 	for file in *.$ext; do
 		new_name=$(awk -F $sep '{print '"$scheme"'}' <<<"$file")
-		mv "$file" "$new_name"
+		echo "$file ---> $new_name"
 	done
-	echo "Done."
-else
-	echo "Aborted."
+
+	# Rename files if ok
+	read -p "Want to rename files as listed above? [y/N]: " run
+
+	if [ "$run" == "y" ]; then
+		for file in *.$ext; do
+			new_name=$(awk -F '$sep' '{print '"$scheme"'}' <<<"$file")
+			mv "$file" "$new_name"
+		done
+		echo "Done."
+	else
+		echo "Aborted."
+	fi
+
 fi
