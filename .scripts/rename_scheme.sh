@@ -31,7 +31,7 @@ if [ -z $sep ]; then
 	# Rename files if ok
 	read -p "Want to rename files as listed above? [y/N]: " run
 
-	if [ "$run" == "y" ]; then
+	if [ "$run" == "y" || "$run" == "Y" ]; then
 		for file in *.$ext; do
 			new_name=$(awk '{print '"$scheme"'}' <<<"$file")
 			mv "$file" "$new_name"
@@ -53,7 +53,7 @@ else
 	# Rename files if ok
 	read -p "Want to rename files as listed above? [y/N]: " run
 
-	if [ "$run" == "y" ]; then
+	if [ "$run" == "y" || "$run" == "Y" ]; then
 		for file in *.$ext; do
 			new_name=$(awk -F '$sep' '{print '"$scheme"'}' <<<"$file")
 			mv "$file" "$new_name"
