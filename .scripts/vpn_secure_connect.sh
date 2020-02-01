@@ -9,9 +9,10 @@
 # This script uses 'dns_nordvpn_0.sh', 'dns_nordvpn_1.sh', 'ipv6_diable.sh' and 'ipv6_enable.sh'.		#
 #***************************************************************************************************************#
 
-# Path to ovpn files
-PATH_USER="/home/tobias"
-PATH_OVPN="/home/tobias/.ovpn"
+# Setting up paths
+USER="tobias"
+PATH_USER="/home/$USER"
+PATH_OVPN="/home/$USER/.ovpn"
 
 # Check if run as root
 if [ $(id -u) -ne 0 ]; then
