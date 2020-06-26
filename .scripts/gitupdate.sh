@@ -13,6 +13,6 @@ GIT_PATH="/home/$USER/git/"
 cd $GIT_PATH
 for dir in $(ls -d */); do
   cd $dir
-  git pull
+  echo "${dir%/}:" && git pull
   cd $GIT_PATH
 done
