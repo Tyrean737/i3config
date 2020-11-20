@@ -77,7 +77,7 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 
 " Spell-check set to F6/F7:
 	map <F6> :setlocal spell! spelllang=en_us<CR>
-	map <F7> :setlocal spell! spelllang=de_de<CR>
+	map <F7> :setlocal spell! spelllang=de_20<CR>
 
 " Use urlview to choose and open a url:
 	:noremap <leader>u :w<Home>silent <End> !urlview<CR>
