@@ -42,10 +42,12 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 	nnoremap S :%s//g<Left><Left>
 
 " Open corresponding.pdf
-	map <leader>p :!zathura <c-r>%<Backspace><Backspace><Backspace>pdf<CR>
+	map <leader>p :!zathura <c-r>%<Backspace><Backspace><Backspace>pdf&<CR>
 
 " Compile document
 	autocmd FileType tex map <leader>c :w<Enter>:!pdflatex <c-r>%<CR><Enter>
+ 	autocmd FileType tex map <leader>x :w<Enter>:!xelatex <c-r>%<CR><Enter>
+
 	autocmd FileType tex map <leader>b :!bibtex <c-r>%<Backspace><Backspace><Backspace><Backspace><CR>
 
 " Compile C++ Program
@@ -73,8 +75,9 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 " Get line, word and character counts with F3:
 	map <F3> :!wc <C-R>%<CR>
 
-" Spell-check set to F6:
+" Spell-check set to F6/F7:
 	map <F6> :setlocal spell! spelllang=en_us<CR>
+	map <F7> :setlocal spell! spelllang=de_de<CR>
 
 " Use urlview to choose and open a url:
 	:noremap <leader>u :w<Home>silent <End> !urlview<CR>
