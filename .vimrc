@@ -176,6 +176,8 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 	autocmd FileType tex inoremap ,col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
 	autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
 
+	autocmd FileType tex inoremap ,mb <ESC>lbi\mbox{<ESC>ea}
+	autocmd FileType tex nnoremap ,mb <ESC>lbi\mbox{<ESC>ea}<ESC>
 	autocmd FileType tex inoremap ,frac \frac{}{<++>}<++><Esc>10hi
 	autocmd FileType tex inoremap ,rm \mathrm{}<++><Esc>4hi
 	autocmd FileType tex inoremap ,en \begin{equation}<Enter><++><Enter>\end{equation}<Enter><Enter><++><ESC>/<++><Enter>NNc4l
