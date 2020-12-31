@@ -82,8 +82,8 @@ mpd_music_dir = "~/Music"
 ##
 visualizer_type = spectrum
 #
-#visualizer_look = ●卐
-#visualizer_look = 卐
+#visualizer_look = ●
+#visualizer_look =
 #
 #visualizer_color = blue, cyan, green, yellow, magenta, red
 #
