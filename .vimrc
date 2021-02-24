@@ -47,8 +47,8 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 " Compile document
 	autocmd FileType tex map <leader>c :w<Enter>:!pdflatex <c-r>%<CR><Enter>
  	autocmd FileType tex map <leader>x :w<Enter>:!xelatex <c-r>%<CR><Enter>
-
 	autocmd FileType tex map <leader>b :!bibtex <c-r>%<Backspace><Backspace><Backspace><Backspace><CR>
+	autocmd FileType rmd map <leader>c :w<Enter>:!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<Enter><Enter>
 
 " Compile C++ Program
 	autocmd FileType cpp map <leader>c :w<Enter>:!g++ <c-r>% -o <c-r>%<Backspace><Backspace><Backspace><Backspace><Enter>
