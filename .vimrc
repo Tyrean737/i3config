@@ -121,10 +121,6 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 	vnoremap <Tab><Space> <Esc>/<++><Enter>"_c4l
 	map <Tab><Space> <Esc>/<++><Enter>"_c4l
 
-" For normal mode when in terminals (in X I have caps mapped to esc, this replaces it when I don't have X)
-	inoremap jw <Esc>
-	inoremap wj <Esc>
-
  "____        _                  _
 "/ ___| _ __ (_)_ __  _ __   ___| |_ ___
 "\___ \| '_ \| | '_ \| '_ \ / _ \ __/ __|
