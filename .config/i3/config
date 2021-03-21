@@ -201,10 +201,10 @@ bindsym $mod+XF86Back		workspace prev
 bindsym $mod+XF86Forward	workspace next
 ##bindsym $mod+Shift+XF86Forward
 bindsym $mod+semicolon		workspace next
-bindsym $mod+apostrophe		split horizontal ;; exec $term
-bindsym $mod+slash		split vertical ;; exec $term
-bindsym $mod+Shift+slash	kill
-bindsym $mod+backslash		workspace back_and_forth
+#bindsym $mod+apostrophe		split horizontal ;; exec $term
+#bindsym $mod+slash		split vertical ;; exec $term
+#bindsym $mod+Shift+slash	kill
+#bindsym $mod+backslash		workspace back_and_forth
 
 set $ws1 "1"
 set $ws2 "2"
