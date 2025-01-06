@@ -10,8 +10,8 @@ INTERFACE="${BLOCK_INSTANCE:-wlan0}"
 
 QUALITY=$(grep $INTERFACE /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
 
-echo 📶 $QUALITY%
-echo 📶 $QUALITY%
+echo  $QUALITY%
+echo  $QUALITY%
 
 # color
 if [[ $QUALITY -ge 80 ]]; then
