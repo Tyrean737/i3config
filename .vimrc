@@ -69,14 +69,11 @@ map <F9> :vsp<space>~/Documents/LaTeX/uni.bib<CR>
 " Make calcurse notes markdown compatible:
 	autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
 
-" Readmes autowrap text:
-	autocmd BufRead,BufNewFile *.md,*.tex set tw=180
-
 " Get line, word and character counts with F3:
 	map <F3> :!wc <C-R>%<CR>
 
-" Spell-check set to F6/F7:
-	map <F6> :setlocal spell! spelllang=en_us<CR>
+	" Spell-check set to F6/F7:
+	map <F6> :setlocal spell! spelllang=en_US<CR>
 	map <F7> :setlocal spell! spelllang=de_20<CR>
 
 " Use urlview to choose and open a url:
