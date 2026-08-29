@@ -1,0 +1,8 @@
+[
+  {
+    "command": [
+      "/usr/local/bin/st"
+    ],
+    "working_directory": "/home/tobias"
+  }
+]

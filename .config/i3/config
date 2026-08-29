@@ -40,6 +40,8 @@ exec --no-startup-id rm -f ~/.larbs/.recording
 exec --no-startup-id nm-applet
 # mpd startup
 exec --no-startup-id mpd
+# restore workspaces from i3-resurrect
+exec --no-startup-id ~/bin/i3-restore-all.sh
 
 # Set Xresources colors:
 set_from_resource $darkblack	color0  #000000
@@ -95,7 +97,7 @@ bindsym $mod+Escape		workspace prev
 bindsym $mod+Shift+Escape 	exec --no-startup-id prompt "Are you sure you want to leave i3?" "i3-msg exit"
 
 # bindsym $mod+BackSpace
-bindsym $mod+Shift+BackSpace	exec --no-startup-id prompt "Are you sure you want to reboot?" "$reboot"
+bindsym $mod+Shift+BackSpace	exec --no-startup-id prompt "Are you sure you want to reboot?" "$HOME/.scripts/i3-save-all.sh $reboot"
 
 ##bindsym $mod+grave
 ##bindsym $mod+asciitilde
@@ -169,7 +171,7 @@ bindsym $mod+y			gaps outer current plus 5
 bindsym $mod+Shift+y		gaps outer current minus 5
 
 bindsym $mod+x			exec --no-startup-id lockscreen
-bindsym $mod+Shift+x		exec --no-startup-id prompt "Are you sure you want to shutdown?" "$shutdown"
+bindsym $mod+Shift+x		exec --no-startup-id prompt "Are you sure you want to shutdown?" "$HOME/.scripts/i3-save-all.sh $shutdown"
 
 bindsym $mod+c			exec --no-startup-id camtoggle
 ##bindsym $mod+Shift+c

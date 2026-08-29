@@ -1,0 +1,77 @@
+{
+  "border": "normal",
+  "current_border_width": -1,
+  "floating": "auto_off",
+  "fullscreen_mode": 0,
+  "geometry": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "layout": "splith",
+  "marks": [],
+  "name": "4",
+  "orientation": "horizontal",
+  "percent": 0.25,
+  "scratchpad_state": "none",
+  "sticky": false,
+  "type": "workspace",
+  "workspace_layout": "default",
+  "nodes": [
+    {
+      "border": "pixel",
+      "current_border_width": 2,
+      "floating": "auto_off",
+      "fullscreen_mode": 0,
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 919,
+        "height": 991
+      },
+      "layout": "splith",
+      "marks": [],
+      "name": "Colloquium: Topological insulators - \u2068Hasan\u2069 and \u2068Kane\u2069 - 2010 - Zotero",
+      "orientation": "none",
+      "percent": 0.5,
+      "scratchpad_state": "none",
+      "sticky": false,
+      "type": "con",
+      "workspace_layout": "default",
+      "swallows": [
+        {
+          "class": "^Zotero$",
+          "instance": "^Navigator$"
+        }
+      ]
+    },
+    {
+      "border": "pixel",
+      "current_border_width": 2,
+      "floating": "auto_off",
+      "fullscreen_mode": 0,
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 600
+      },
+      "layout": "splith",
+      "marks": [],
+      "name": "/home/tobias/FZ_Tobias/Documents/Literatur/B\u00fccher/Topological Band Theory and the Z2 Invariant.pdf",
+      "orientation": "none",
+      "percent": 0.5,
+      "scratchpad_state": "none",
+      "sticky": false,
+      "type": "con",
+      "workspace_layout": "default",
+      "swallows": [
+        {
+          "class": "^org\\.pwmt\\.zathura$",
+          "instance": "^org\\.pwmt\\.zathura$"
+        }
+      ]
+    }
+  ]
+}

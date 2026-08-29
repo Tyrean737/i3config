@@ -1,0 +1,20 @@
+[
+  {
+    "command": [
+      "/usr/local/bin/st"
+    ],
+    "working_directory": "/home/tobias"
+  },
+  {
+    "command": [
+      "/usr/local/bin/st"
+    ],
+    "working_directory": "/home/tobias/git/phd-thesis"
+  },
+  {
+    "command": [
+      "/usr/local/bin/st"
+    ],
+    "working_directory": "/home/tobias/git/phd-thesis"
+  }
+]

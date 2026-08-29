@@ -1,0 +1,4 @@
+{
+  "directory": "~/.i3/i3-resurrect",
+  "terminals": ["st"]
+}

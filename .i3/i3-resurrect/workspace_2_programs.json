@@ -1,0 +1,8 @@
+[
+  {
+    "command": [
+      "/opt/zen-browser-bin/zen-bin"
+    ],
+    "working_directory": "/home/tobias"
+  }
+]

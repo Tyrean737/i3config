@@ -1,0 +1,18 @@
+[
+  {
+    "command": [
+      "/usr/bin/zathura",
+      "--",
+      "/home/tobias/FZ_Tobias/Documents/Literatur/B\u00fccher/B. Andrei Bernevig_ Taylor L. Hughes - Topological Insulators and Topological Superconductors-Princeton University Press (2013).pdf"
+    ],
+    "working_directory": "/home/tobias/FZ_Tobias/Documents/Literatur/B\u00fccher"
+  },
+  {
+    "command": [
+      "/usr/bin/zathura",
+      "--",
+      "/home/tobias/FZ_Tobias/Documents/Literatur/B\u00fccher/David Vanderbilt - Berry Phases in Electronic Structure Theory_ Electric Polarization, Orbital Magnetization and Topological Insulators.pdf"
+    ],
+    "working_directory": "/home/tobias/FZ_Tobias/Documents/Literatur/B\u00fccher"
+  }
+]
