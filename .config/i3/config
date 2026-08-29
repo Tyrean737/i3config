@@ -41,7 +41,7 @@ exec --no-startup-id nm-applet
 # mpd startup
 exec --no-startup-id mpd
 # restore workspaces from i3-resurrect
-exec --no-startup-id ~/bin/i3-restore-all.sh
+exec --no-startup-id $HOME/.scripts/i3-restore-all.sh
 
 # Set Xresources colors:
 set_from_resource $darkblack	color0  #000000
