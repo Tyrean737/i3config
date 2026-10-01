@@ -11,13 +11,21 @@
 for_window [class="^.*"] border pixel 2
 gaps inner 15
 gaps outer 15
-set $term --no-startup-id $TERMINAL
+set $term $TERMINAL
 set $mod Mod4
 set $stoprec --no-startup-id killrecording
 set $shutdown sudo -A shutdown -h now
 set $reboot sudo -A reboot
 set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
 set $hibernate sudo -A systemctl suspend
+
+# #---Monitors ---# #
+# Setting up monitor placement
+set $monitor_left eDP-1
+set $monirot_right DP-1
+
+# Setting keymap to German
+exec_always setxkbmap de
 
 # #---Starting External Scripts---# #
 # Setting the background and colorscheme:
@@ -203,7 +211,9 @@ bindsym $mod+XF86Back		workspace prev
 bindsym $mod+XF86Forward	workspace next
 ##bindsym $mod+Shift+XF86Forward
 bindsym $mod+semicolon		workspace next
-#bindsym $mod+apostrophe		split horizontal ;; exec $term
+bindsym $mod+less 		move workspace to output left
+bindsym $mod+Shift+less 	move workspace to output right
+#bindsym $mod+apostrophe	split horizontal ;; exec $term
 #bindsym $mod+slash		split vertical ;; exec $term
 #bindsym $mod+Shift+slash	kill
 #bindsym $mod+backslash		workspace back_and_forth
@@ -307,10 +317,10 @@ bindsym $mod+plus		exec --no-startup-id lmc up 5
 bindsym $mod+Shift+plus		exec --no-startup-id lmc up 15
 bindsym $mod+minus 		exec --no-startup-id lmc down 5
 bindsym $mod+Shift+minus	exec --no-startup-id lmc down 15
-bindsym $mod+less 		exec --no-startup-id lmc prev
-bindsym $mod+Shift+less		exec --no-startup-id lmc replay
-bindsym $mod+greater		exec --no-startup-id lmc next
-bindsym $mod+Shift+greater	exec --no-startup-id lmc next
+#bindsym $mod+less 		exec --no-startup-id lmc prev
+#bindsym $mod+Shift+less	exec --no-startup-id lmc replay
+#bindsym $mod+greater		exec --no-startup-id lmc next
+#bindsym $mod+Shift+greater	exec --no-startup-id lmc next
 
 # For advancing forward/backward in an mpd song
 bindsym $mod+bracketleft 	exec --no-startup-id lmc back 10
